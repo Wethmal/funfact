@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts About Space</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e0f7fa;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 300px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            min-height: 50px; /* Ensures space for the fact display */
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fun Facts About Space</h1>
+        <p id="factDisplay">Click the button to see a fun fact!</p>
+        <button id="generateFact">Generate Another Fun Fact</button>
+    </div>
+    <script>
+        const facts = [
+            "Space is so vast that it is believed to be infinite, and it continues to expand every second.",
+            "A black hole is a region in space where the gravitational pull is so strong that nothing, not even light, can escape from it.",
+            "A neutron star is incredibly dense; just a sugar-cube-sized amount of material from one would weigh about as much as all of humanity combined.",
+            "The coldest known place in the universe is the Boomerang Nebula, with a temperature of -458 degrees Fahrenheit (-272 degrees Celsius).",
+            "There are an estimated 100 billion galaxies in the observable universe, each containing millions or even billions of stars.",
+            "Time moves slower in stronger gravitational fields, meaning that time on Earth is slightly faster than time on the International Space Station.",
+            "The Hercules-Corona Borealis Great Wall is the largest known structure in the universe, spanning over 10 billion light-years.",
+            "Scientists have discovered water in various forms throughout the universe, including ice on moons and comets.",
+            "Space is a vacuum, which means sound cannot travel through it.",
+            "The observable universe is about 93 billion light-years in diameter."
+        ];
+
+        document.getElementById('generateFact').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('factDisplay').innerText = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
